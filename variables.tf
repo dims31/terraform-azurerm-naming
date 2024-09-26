@@ -23,6 +23,10 @@ variable "free_name" {
 
 }
 
+variable "rsg_free_name" {
+  default = "app"
+}
+
 variable "legacy_name" {
   default = null
 }
