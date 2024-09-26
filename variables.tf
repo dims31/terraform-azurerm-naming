@@ -30,3 +30,4 @@ variable "rsg_free_name" {
 variable "legacy_name" {
   default = null
 }
+
