@@ -1,0 +1,13 @@
+version: "0.19"
+
+formatter: "markdown table"
+
+header-from: "main.tf"
+
+sections:
+  hide:
+    - "footer"
+
+output:
+  file: "README.md"
+  mode: "inject"
