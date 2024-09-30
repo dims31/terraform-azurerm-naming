@@ -1,14 +1,14 @@
 variable "env" {
   validation {
     condition = contains(["dev","uat","bch","prd"], var.env)
-    error_message = "La valeur doit etre dev/uat/bch/prd"
+    error_message = "Value must be dev/uat/bch/prd"
   }
 }
 
 variable "bu" {
   validation {
     condition = contains(["ide","shr","ntw","bu1","bu2"], var.bu)
-    error_message = "La valeur doit etre ide/ntw/bu1/bu2"
+    error_message = "Value must be ide/shr/ntw/bu1/bu2"
   }
 }
 
@@ -20,7 +20,11 @@ variable "project" {
 }
 
 variable "free_name" {
-
+  validation {
+  condition = length(var.free_name) >= 3 && length(var.free_name) <= 5
+  error_message = "Le code projet doit etre sur 3 lettres"
+  }
+  default = "001"
 }
 
 variable "rsg_free_name" {
