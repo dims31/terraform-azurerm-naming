@@ -31,19 +31,8 @@ variable "free_name" {
   condition = length(var.free_name) >= 3 && length(var.free_name) <= 5
   error_message = "Free Name must be between 3 and 5 characters"
   }
-  default = "001"
-  description = "Last 3 to 5 characters of the resource name"
-}
-
-variable "rsg_free_name" {
-  type = string
-  validation {
-    condition = length(var.rsg_free_name) >= 3 && length(var.rsg_free_name) <= 5
-    error_message = "Free Name must be between 3 and 5 characters"
-  }
   default = "app"
-  description = "Last 3 to 5 characters of the resource group name"
-
+  description = "Last 3 to 5 characters of the resource name"
 }
 
 variable "legacy_name" {
