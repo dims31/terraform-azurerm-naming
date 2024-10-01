@@ -29,10 +29,10 @@ variable "free_name" {
   type = string
   validation {
   condition = length(var.free_name) >= 3 && length(var.free_name) <= 7
-  error_message = "Free Name must be between 3 and 5 characters"
+  error_message = "Free Name must be between 3 and 7 characters"
   }
   default = "app"
-  description = "Last 3 to 5 characters of the resource name"
+  description = "Last 3 to 7 characters of the resource name"
 }
 
 variable "legacy_name" {
