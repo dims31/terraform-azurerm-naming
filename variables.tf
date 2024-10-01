@@ -28,7 +28,7 @@ variable "project" {
 variable "free_name" {
   type = string
   validation {
-  condition = length(var.free_name) >= 3 && length(var.free_name) <= 5
+  condition = length(var.free_name) >= 3 && length(var.free_name) <= 7
   error_message = "Free Name must be between 3 and 5 characters"
   }
   default = "app"
